@@ -145,7 +145,7 @@ div.Right.active {
     padding: 100px;
 }
 
-@media (max-width: 85vw) {
+@media (max-width: 1500px) {
     .Row {
         flex-direction: column;
         justify-content: center;
@@ -156,15 +156,9 @@ div.Right.active {
         margin-bottom: 20%;
     }
 
-    div.Left.active{
+    div.Left.active,  div.Right.active{
         float:none;
         margin-left: 0%;
-        height: 100%;
-        width: 80%;
-    }
-
-    div.Right.active{
-        float: none;
         margin-right: 0%;
         height: 100%;
         width: 80%;
