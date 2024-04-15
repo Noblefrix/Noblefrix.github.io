@@ -145,7 +145,7 @@ div.Right.active {
     padding: 100px;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 85vw) {
     .Row {
         flex-direction: column;
         justify-content: center;
