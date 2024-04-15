@@ -159,14 +159,14 @@ div.Right.active {
     div.Left.active{
         float:none;
         margin-left: 0%;
-        height: 25%;
+        height: 60%;
         width: 75%;
     }
 
     div.Right.active{
         float: none;
         margin-right: 0%;
-        height: 25%;
+        height: 60%;
         width: 75%;
     }
 
