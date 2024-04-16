@@ -46,7 +46,7 @@ body {
     color: white;
 }
 .content {
-    width: 50%;
+    width: 40%;
     padding: 75px;
     align-content: inherit;
     opacity: 0;
@@ -54,7 +54,7 @@ body {
 }
 
 .content.active {
-    width: 50%;
+    width: 40%;
     padding: 75px;
     align-content: center;
     opacity: 1;
@@ -84,7 +84,7 @@ div.Left {
     border: 5px solid rgb(85,85,85);
     background-color: rgb(80,80,80);
     padding: 30px;
-    width: 40%;
+    width: 45%;
     height: 50%;   
 
     opacity: 0;
@@ -100,7 +100,7 @@ div.Left.active {
     border: 5px solid rgb(85,85,85);
     background-color: rgb(80,80,80);
     padding: 30px;
-    width: 40%;
+    width: 45%;
     height: 50%;  
 
     opacity: 1;
@@ -115,7 +115,7 @@ div.Right {
     border: 5px solid rgb(85,85,85);    
     background-color: rgb(80,80,80);
     padding: 30px;
-    width: 40%;
+    width: 45%;
     height: 50%; 
 
     opacity: 0;
@@ -131,7 +131,7 @@ div.Right.active {
     border: 5px solid rgb(85,85,85);    
     background-color: rgb(80,80,80);
     padding: 30px;
-    width: 40%;
+    width: 45%;
     height: 50%; 
 
     opacity: 1;
@@ -164,7 +164,8 @@ div.Right.active {
         width: 80%;
     }
 
-    .content.active {
+    .content, .content.active {
         top: auto;
+        width: 100%;
     }
 }
