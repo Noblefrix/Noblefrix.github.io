@@ -48,6 +48,7 @@ body {
 .content {
     width: 40%;
     padding: 75px;
+    margin: 50px;
     align-content: inherit;
     opacity: 0;
     transition: 1s all ease;
