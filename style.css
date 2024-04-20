@@ -118,6 +118,7 @@ div.Left.active {
     padding: 30px;
     width: 35%;
     height: 50%;    
+
     opacity: 1;
 }
 
@@ -148,6 +149,7 @@ div.Right.active {
     padding: 30px;
     width: 35%;
     height: 50%; 
+    
     opacity: 1;
 }
 
