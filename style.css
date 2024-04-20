@@ -172,13 +172,4 @@ div.Right.active {
         top: auto;
         width: 80%;
     }
-
-    .media {
-        align-content: center;
-        width: 100%;
-        height: 90%;
-        border-radius: 15px; border: 5px; 
-        z-index: 2; 
-        
-    }
 }
