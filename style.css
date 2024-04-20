@@ -84,7 +84,7 @@ div.Left {
     border: 5px solid rgb(85,85,85);
     background-color: rgb(80,80,80);
     padding: 30px;
-    width: 45%;
+    width: 35%;
     height: 50%;   
 
     opacity: 0;
@@ -100,7 +100,7 @@ div.Left.active {
     border: 5px solid rgb(85,85,85);
     background-color: rgb(80,80,80);
     padding: 30px;
-    width: 45%;
+    width: 35%;
     height: 50%;  
 
     opacity: 1;
@@ -115,7 +115,7 @@ div.Right {
     border: 5px solid rgb(85,85,85);    
     background-color: rgb(80,80,80);
     padding: 30px;
-    width: 45%;
+    width: 35%;
     height: 50%; 
 
     opacity: 0;
@@ -131,7 +131,7 @@ div.Right.active {
     border: 5px solid rgb(85,85,85);    
     background-color: rgb(80,80,80);
     padding: 30px;
-    width: 45%;
+    width: 35%;
     height: 50%; 
 
     opacity: 1;
