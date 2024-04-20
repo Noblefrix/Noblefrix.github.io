@@ -152,17 +152,20 @@ div.Right.active {
         align-items: center;
         height: 650px;  
         
-        padding: 0%;
+        padding: 5px;
         margin-top: 35px;
         margin-bottom: 35px;
     }
 
     div.Left, div.Left.active, div.Right, div.Right.active{
         float:none;
+        margin-top: 35px;
+        margin-bottom: 35px;
         margin-left: 0%;
         margin-right: 0%;
         height: 85%;
         width: 80%;
+
     }
 
     .content, .content.active {
