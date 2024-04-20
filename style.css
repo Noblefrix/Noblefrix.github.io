@@ -149,7 +149,7 @@ div.Right.active {
     padding: 30px;
     width: 35%;
     height: 50%; 
-    
+
     opacity: 1;
 }
 
@@ -215,7 +215,9 @@ div.Right.active {
         width: 80%;
     }
 
-    .content, .content.active {
+    .content, .content.active { 
+        align-content: center;
+        opacity: 1;
         margin: 50px;
         padding: 75px;
         height: 40%;
