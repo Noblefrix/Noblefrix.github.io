@@ -157,11 +157,11 @@ div.Right.active {
         margin-bottom: 20%;
     }
 
-    div.Left.active,  div.Right.active{
+    div.Left, div.Left.active, div.Right, div.Right.active{
         float:none;
         margin-left: 0%;
         margin-right: 0%;
-        height: 90%;
+        height: 85%;
         width: 80%;
     }
 
