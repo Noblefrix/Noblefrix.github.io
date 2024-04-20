@@ -85,7 +85,7 @@ div.Left {
     background-color: rgb(80,80,80);
     padding: 30px;
     width: 35%;
-    height: 50%;   
+    height: 45%;   
 
     opacity: 0;
     transition: 1s all ease;
@@ -101,7 +101,7 @@ div.Left.active {
     background-color: rgb(80,80,80);
     padding: 30px;
     width: 35%;
-    height: 50%;  
+    height: 45%;  
 
     opacity: 1;
 }
@@ -116,7 +116,7 @@ div.Right {
     background-color: rgb(80,80,80);
     padding: 30px;
     width: 35%;
-    height: 50%; 
+    height: 45%; 
 
     opacity: 0;
     transition: 1s all ease;
@@ -132,7 +132,7 @@ div.Right.active {
     background-color: rgb(80,80,80);
     padding: 30px;
     width: 35%;
-    height: 50%; 
+    height: 45%; 
 
     opacity: 1;
 }
