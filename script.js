@@ -4,34 +4,55 @@ const itemWidth = 400; // Width of one item
 const gap = 30; // Margin-right between items
 const scrollAmount = itemWidth + gap; // Total scroll amount per click
 
-function scrollLeftCustom() {
+// Debounce function
+const debounce = (mainFunction, delay) => {
+    let timer;
+    return function (...args) {
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+            mainFunction(...args);
+        }, delay);
+    };
+};
+
+// Scroll functions
+function scrollLeft() {
     scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
     updateBlurredItems();
 }
 
-function scrollRightCustom() {
+function scrollRight() {
     scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     updateBlurredItems();
 }
 
+// Debounced versions of the scroll functions
+const scrollLeftCustom = debounce(scrollLeft, 100);
+const scrollRightCustom = debounce(scrollRight, 100);
+
+// Event listeners for buttons (replace with your button selectors)
+document.querySelector('.scroll-left-button').addEventListener('click', scrollLeftCustom);
+document.querySelector('.scroll-right-button').addEventListener('click', scrollRightCustom);
+
+// Update blurred state on scroll
 scrollContainer.addEventListener('scroll', updateBlurredItems);
 
+// Update blurred items based on scroll position
 function updateBlurredItems() {
-    const scrollPosition = scrollContainer.scrollLeft; // Current scroll position
-    const scrollContainerWidth = scrollContainer.clientWidth; // Width of the scroll container
-    const centerPosition = scrollPosition + (scrollContainerWidth / 2); // Center of the scroll container
+    const scrollPosition = scrollContainer.scrollLeft;
+    const scrollContainerWidth = scrollContainer.clientWidth;
+    const centerPosition = scrollPosition + (scrollContainerWidth / 2);
 
     items.forEach((item, index) => {
         const itemStart = index * (itemWidth + gap);
         const itemEnd = itemStart + itemWidth;
 
-        // Check if the center of the scroll container overlaps with the item
         if (centerPosition >= itemStart && centerPosition < itemEnd) {
-            item.classList.add('centered'); // Center the currently centered item
-            item.classList.remove('blurred'); // Remove blur from the centered item
+            item.classList.add('centered');
+            item.classList.remove('blurred');
         } else {
-            item.classList.add('blurred'); // Blur all other items
-            item.classList.remove('centered'); // Remove centered class from non-centered items
+            item.classList.add('blurred');
+            item.classList.remove('centered');
         }
     });
 }
