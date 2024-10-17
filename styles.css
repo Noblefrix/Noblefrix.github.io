@@ -56,8 +56,8 @@ header{
 }
 
 .frame {
-  flex-direction: column;
   display: flex;
+  flex-direction: column;
   padding-top: 150px;
   margin: auto;
   height: 1080px;
