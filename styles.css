@@ -23,6 +23,18 @@ header{
   z-index: 50;
 }
 
+iframe{
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.imagecontent {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
+
 .headerbackground{
   position: absolute; 
   width: 100%;
@@ -61,7 +73,7 @@ header{
   padding-top: 150px;
   margin: auto;
   height: 1080px;
-  width: 100%;
+  width: 95%;
 }
 
 .about-container{
@@ -77,7 +89,7 @@ h1{
   font-family: "Fira Code", monospace;
   font-style: normal;
   font-weight: 100;
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-align: left;
 }
 .pfpframe{
@@ -115,21 +127,25 @@ h1{
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
   position: relative;
-  width: 85%;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
   border-radius: 20px;
   padding: 10px;
+  overflow: hidden; /* Prevents scrolling when zooming */
 }
 
 .scrollcontent {
   display: flex;
-  overflow-x: hidden;
+  overflow-x: auto; /* Allows horizontal scrolling */
   scroll-behavior: smooth;
   scrollbar-width: none; 
   border-radius: 5px;
-  width: calc((480px * 3) + (15px * 2)); 
-
+  width: 75%;
+  transform: scale(1); /* Prevents scaling of content */
+  transform-origin: left; /* Keep content anchored to the left during scale */
+  will-change: transform; /* Performance optimization */
 }
 
 .scrollcontent::-webkit-scrollbar {
@@ -137,35 +153,33 @@ h1{
 }
 
 .content {
-  min-width: 500px; 
-  max-width: 500px;
-  height: 281px;
+  flex: 0 0 auto; /* Change this to auto to use dynamic width */
+  width: calc(33.33% - 30px); /* Ensure each item takes up 1/3 of the container */
+  height: 300px;
   background-color: #796287;
-  margin-right: 15px; 
-  margin-left: 15px;
+  margin: 15px; /* Space between items */
   border-radius: 5px;
   display: flex;
   align-items: center;
+  justify-content: center;
   font-size: 1.2rem;
   color: #333333;
+  transition: filter 0.3s ease; /* Smooth transition for blur effect */
 }
-
-
-.blurred {
-  filter: blur(5px);
-  transition: filter 0.3s ease; 
-}
-
 
 .centered {
-  filter: blur(0px); 
-  transition: filter 0.3s ease; 
+  filter: none; /* No filter for centered item */
 }
 
-.button{
+.blurred {
+  filter: blur(4px); /* Blur effect for non-centered items */
+}
+
+.button {
   background-color: transparent;
   margin: 10px;
 }
+
 
 .showcase-title{
   display: flex;
