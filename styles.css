@@ -1,4 +1,5 @@
 
+
 body{
   width: 100%;
   height: 5000px;
@@ -62,6 +63,15 @@ header{
   width: 100%;
 }
 
+h1{
+  margin: 25px;
+  align-items: center;
+  font-family: "Fira Code", monospace;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 1rem;
+  text-align: left;
+}
 .pfpframe{
   display: flex;
   position: absolute; 
@@ -93,4 +103,61 @@ header{
   text-align: left;
   padding: 10px;
   text-shadow: 1.5px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.scrollcontainer {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin: 100px -100px; 
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.scrollcontent {
+  display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none; 
+  border-radius: 5px;
+  width: calc((480px * 3) + (15px * 2)); 
+}
+
+.scrollcontent::-webkit-scrollbar {
+  display: none;
+}
+
+.content {
+  min-width: 400px; 
+  max-width: 400px;
+  height: 225px;
+  background-color: #796287;
+  margin-right: 15px; 
+  margin-left: 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #333333;
+}
+
+
+.blurred {
+  filter: blur(5px);
+  transition: filter 0.3s ease; 
+}
+
+
+.centered {
+  filter: blur(0px); 
+  transition: filter 0.3s ease; 
+}
+
+.button{
+  background-color: transparent;
+  margin-left: 5px;
+  margin-right: 5px;
 }
